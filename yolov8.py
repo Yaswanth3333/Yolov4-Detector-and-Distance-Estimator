@@ -34,7 +34,7 @@ FONTS = cv.FONT_HERSHEY_COMPLEX
 model = YOLO("yolov8n.pt")  # YOLOv8 Nano model pre-trained on COCO
 
 
-# Object detection function
+# this is Object detection function
 def object_detector(image):
     results = model(image)
     data_list = []
