@@ -41,7 +41,7 @@ def ObjectDetector(image):
 camera = cv.VideoCapture(0)
 counter = 0
 capture = False
-number = 0
+number = 4
 while True:
     ret, frame = camera.read()
 
@@ -49,7 +49,7 @@ while True:
     ObjectDetector(frame)
     cv.imshow('oringal', orignal)
 
-    print(capture == True and counter < 10)
+    #print(capture == True and counter < 10)
     if capture == True and counter < 10:
         counter += 1
         cv.putText(
@@ -63,7 +63,7 @@ while True:
     if key == ord('c'):
         capture = True
         number += 1
-        cv.imwrite(f'ReferenceImages/image{number}.png', orignal)
+        cv.imwrite(f'ReferenceImages/image{number}.jpg', orignal)
     if key == ord('q'):
         break
 cv.destroyAllWindows()
